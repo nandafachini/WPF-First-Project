@@ -1,0 +1,219 @@
+﻿<Window
+    x:Class="CRUDProject.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:CRUDProject"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Monte seu próprio Açaí!"
+    Width="700"
+    Height="500"
+    mc:Ignorable="d">
+    <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Visible">
+        <Grid Background="#FF9377A7" Margin="0,0,0,0">
+            <TextBlock 
+            Width="141"
+            HorizontalAlignment="Left" 
+            Margin="528,34,0,389"
+            TextWrapping="Wrap"
+            TextAlignment="Center"
+            FontWeight="Bold">
+            Clique em adicionar pedido para adicionar um novo Açaí!
+            </TextBlock>
+
+            <Button x:Name="addButton"
+            Width="141"
+            Margin="528,99,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Command="{Binding Add}"
+            Content="Adicionar pedido"
+            Cursor="Hand"
+            FontWeight="ExtraBold"
+            RenderTransformOrigin="0.482,-0.248"
+            Background="#FF380038" 
+            Foreground="White" BorderBrush="White"/>
+
+            <TextBlock 
+            Width="141"
+            HorizontalAlignment="Left" 
+            Margin="31,307,0,124"
+            TextWrapping="Wrap"
+            TextAlignment="Center"
+            FontWeight="Bold">
+            Cadastre-se para finalizar o pedido!
+            </TextBlock>
+
+            <Button x:Name="removeButton"
+            Width="141"
+            Margin="31,99,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Command="{Binding Remove}"
+            Content="Remover pedido"
+            Cursor="Hand"
+            FontWeight="ExtraBold"
+            Background="#FF380038" Foreground="White" BorderBrush="White"/>
+
+            <TextBlock 
+            Width="141"
+            HorizontalAlignment="Left" 
+            Margin="31,38,0,393"
+            TextWrapping="Wrap"
+            TextAlignment="Center"
+            FontWeight="Bold">
+            Selecione um pedido para removê-lo.
+            </TextBlock>
+
+            <Button x:Name="saveButton"
+            Width="141"
+            Margin="528,369,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Salvar pedido"
+            Cursor="Hand"
+            Click="Save_Button"
+            FontWeight="ExtraBold"
+            Background="#FF380038" Foreground="White" BorderBrush="White"/>
+
+            <TextBlock 
+            Width="141"
+            HorizontalAlignment="Left" 
+            Margin="528,307,0,124"
+            TextWrapping="Wrap"
+            TextAlignment="Center"
+            FontWeight="Bold">
+            Clique em Salvar Pedido para salvar seu pedido.
+            </TextBlock>
+
+            <Button x:Name="cadButton"
+            Width="141"
+            Margin="31,369,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Command="{Binding AddUsuario}"
+            Content="Cadastrar Usuário"
+            Cursor="Hand"
+            FontWeight="ExtraBold"
+            Background="#FF380038" Foreground="White" BorderBrush="White"/>
+
+            <TextBlock 
+            Width="141"
+            HorizontalAlignment="Left" 
+            Margin="528,154,0,265"
+            TextWrapping="Wrap"
+            TextAlignment="Center"
+            FontWeight="Bold">
+            Clique em atualizar para atualizar seu pedido.
+            </TextBlock>
+
+            <Button x:Name="updateButton" Width="141"
+            Margin="528,241,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Height="22"
+            Content="Atualizar Pedido"
+            Cursor="Hand"
+            Command="{Binding UpdateAcai}"
+            FontWeight="ExtraBold"
+            Background="#FF380038" Foreground="White" BorderBrush="White"/>
+
+            <TextBlock 
+            Width="141"
+            HorizontalAlignment="Left" 
+            Margin="31,161,0,257"
+            TextWrapping="Wrap"
+            TextAlignment="Center"
+            FontWeight="Bold">
+            Clique em visualizar para ver a lista de todos os Açaís.
+            </TextBlock>
+
+            <Button x:Name="visualizeButton" Width="141"
+            Margin="31,241,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Height="22"
+            Content="Visualizar"
+            Cursor="Hand"
+            Command="{Binding ShowAcais}"
+            FontWeight="ExtraBold"
+            Background="#FF380038" Foreground="White" BorderBrush="White"/>
+
+            <TextBlock x:Name="myTextBlock"
+                       HorizontalAlignment="Center"
+                       TextAlignment="Center"
+                       Text="Entre com seu nickname:" 
+                       FontSize="16"
+                       Margin="0,345,0,105"
+                       Padding="1"
+                       FontWeight="Bold" Width="300"/>
+
+            <TextBox x:Name="myTextBox"
+                     FontSize="15"
+                     Width="175"
+                     MaxWidth="300px"
+                     HorizontalAlignment="Left" Margin="325,389,0,60"/>
+
+            <TextBlock HorizontalAlignment="Left"
+                   TextAlignment="Right" 
+                   FontSize="20"
+                   Margin="190,0,0,427"
+                   Padding="1"
+                   FontWeight="DemiBold" 
+                   Width="155" 
+                   RenderTransformOrigin="0.477,0.48"
+                   TextWrapping="WrapWithOverflow"
+                   Text="Bem vindo(a),"
+                   />
+
+
+            <Button x:Name="nicknameButton"
+                Content="Salvar Nickname" 
+                FontSize="12"
+                FontWeight="Bold"
+                HorizontalAlignment="Left"
+                HorizontalContentAlignment="Center"
+                Width="120"
+                Margin="200,389,0,60"
+                Cursor="Hand"
+                Background="#FF380038" Foreground="White" BorderBrush="White"
+                Command="{Binding ShowNickname}"
+                />
+
+            <Label x:Name="labelName"
+               HorizontalAlignment="Left"
+               HorizontalContentAlignment="Left"
+               Width="160"
+               FontSize="20"
+               FontWeight="Bold" Margin="350,0,0,427" Padding="1"
+               Content="{Binding ElementName=myTextBox, Path=Text}" RenderTransformOrigin="0.507,0.491">
+            </Label>
+
+            <ListView
+            Width="300"
+            Height="300"
+            ItemsSource="{Binding listaAcais}"
+            SelectedItem="{Binding AcaiSelecionado}"
+            Background="#FFFFE8FF" Margin="200,36,180,148">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn
+                        Width="100"
+                        DisplayMemberBinding="{Binding Tamanho}"
+                        Header="Tamanho"/>
+                        <GridViewColumn
+                        Width="100"
+                        DisplayMemberBinding="{Binding Fruta}"
+                        Header="Fruta" />
+                        <GridViewColumn
+                        Width="100"
+                        DisplayMemberBinding="{Binding Complemento}"
+                        Header="Complemento" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+
+        </Grid>
+    </ScrollViewer>
+</Window>
