@@ -1,0 +1,82 @@
+﻿<Window
+    x:Class="CRUDProject.CadastroAcai"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:CRUDProject"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Cadastro de Açai"
+    Width="400"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid Background="#FF9377A7">
+        <TextBox
+            FontSize="20"
+            Width="327"
+            Height="30"
+            Margin="40,73,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="{Binding Tamanho}"
+            TextWrapping="Wrap" />
+        <TextBox
+            FontSize="20"
+            Width="327"
+            Height="30"
+            Margin="40,160,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="{Binding Fruta}"
+            TextWrapping="Wrap" />
+        <TextBox
+            FontSize="20"
+            Width="327"
+            Height="30"
+            Margin="40,259,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="{Binding Complemento}"
+            TextWrapping="Wrap" />
+        <Button
+            Height="30"
+            Margin="0,329,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Click="Button_Salvar"
+            Content="Salvar Cadastro"
+            Cursor="Hand" 
+            FontWeight="ExtraBlack"
+            Background="#FF380038" 
+            Foreground="White" BorderBrush="White" Width="160"/>
+        <TextBlock
+            Width="327"
+            Margin="40,38,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="20"
+            Text="Insira o tamanho desejado"
+            TextAlignment="Center"
+            TextWrapping="Wrap"
+            FontWeight="Bold"/>
+        <TextBlock
+            Width="327"
+            Margin="40,124,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="20"
+            Text="Insira a fruta de sua preferência"
+            TextAlignment="Center"
+            TextWrapping="Wrap"
+            FontWeight="Bold"/>
+        <TextBlock
+            Width="327"
+            Margin="40,226,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FontSize="20"
+            Text="Escolha um complemento"
+            TextAlignment="Center"
+            TextWrapping="Wrap"
+            FontWeight="Bold"/>
+    </Grid>
+</Window>

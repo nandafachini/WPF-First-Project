@@ -1,0 +1,42 @@
+﻿<Window
+    x:Class="CRUDProject.Views.VerPedidoTotal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:CRUDProject.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="VerPedidoTotal"
+    Width="493"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid Background="#FF9377A7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="213*" />
+            <RowDefinition Height="221*" />
+        </Grid.RowDefinitions>
+        <ListView
+            Grid.RowSpan="2"
+            Width="300"
+            Margin="0,44,0,44"
+            HorizontalAlignment="Center"
+            ItemsSource="{Binding listaAcais}"
+            SelectedItem="{Binding AcaiSelecionado}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Width="100"
+                        DisplayMemberBinding="{Binding Tamanho}"
+                        Header="Tamanho" />
+                    <GridViewColumn
+                        Width="100"
+                        DisplayMemberBinding="{Binding Fruta}"
+                        Header="Fruta" />
+                    <GridViewColumn
+                        Width="100"
+                        DisplayMemberBinding="{Binding Complemento}"
+                        Header="Complemento" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
